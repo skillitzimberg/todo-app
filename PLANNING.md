@@ -2,6 +2,8 @@
 
 1. Display a single static todo item
 2. Dynamically insert a todo item with JavaScript
+    - create JavaScript file
+    - link JS file to HTML
     - Wrap the static todo element in a containing element
     - Give the containing element an id
     - Insert the todo into the containing element
