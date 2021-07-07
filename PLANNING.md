@@ -2,6 +2,9 @@
 
 1. Display a single static todo item
 2. Dynamically insert a todo item with JavaScript
+    - Wrap the static todo element in a containing element
+    - Give the containing element an id
+    - Insert the todo into the containing element
 3. Dynamically insert a todo item from a collection consisting of one todo
 4. Programmatically insert two or more todo items from a collection of todos
 5. Display a form field for adding new todo items to the list
