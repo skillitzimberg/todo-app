@@ -8,6 +8,9 @@
     - Give the containing element an id
     - Insert the todo into the containing element
 3. Dynamically insert a todo item from a collection consisting of one todo
+    - Create a collection with one todo
+    - Retrieve the todo from the collection
+    - Insert the todo into the containing element
 4. Programmatically insert two or more todo items from a collection of todos
 5. Display a form field for adding new todo items to the list
 6. Add todos entered into the form to the todo collection

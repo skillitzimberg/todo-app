@@ -1,3 +1,5 @@
 const todosElem = document.getElementById("todos");
 
-todosElem.innerHTML = "<h2>Mow the yard</h2>"
+let todos = ["Water the yard"];
+
+todosElem.innerHTML = `<h2>${todos[0]}</h2>`;
