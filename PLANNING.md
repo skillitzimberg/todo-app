@@ -4,14 +4,16 @@
 2. Dynamically insert a todo item with JavaScript
     - create JavaScript file
     - link JS file to HTML
-    - Wrap the static todo element in a containing element
-    - Give the containing element an id
-    - Insert the todo into the containing element
+    - Wrap the static todo element in a containing element (todo list)
+    - Give the todo list an id
+    - Insert the todo into the todo list
 3. Dynamically insert a todo item from a collection consisting of one todo
     - Create a collection with one todo
     - Retrieve the todo from the collection
-    - Insert the todo into the containing element
+    - Insert the todo into the todo list
 4. Programmatically insert two or more todo items from a collection of todos
+    - Add a few more items to the todos collection
+    - Create a function that inserts items from the collection into the todo list
 5. Display a form field for adding new todo items to the list
 6. Add todos entered into the form to the todo collection
 7. Display a "mark as complete" UI element
@@ -21,7 +23,10 @@
 10. Programmatically delete a todo item when a user clicks the "delete todo" UI element
 
 ## Things I didn't plan for
+- Elem.innerHTML replaces all the child element with the given string. I'm going to need to create elements, then insert them.
+- I should have started with a `ul` instead of a `div`
 
 ## Googled  
+`mdn document add children`
 
 ## Resources
