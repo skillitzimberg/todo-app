@@ -18,7 +18,11 @@
     - Create a form element
     - Give the form an input field
     - Give the form a submit button
-6. Add todos entered into the form to the todo collection
+6. Add todos entered into the form to the todo collection & in the UI
+    - Add an event handler for the submit button
+    - Create a reference to the todo input so we can get the value submited
+    - Add the value to the collection of todos
+    - Insert in the todo list
 7. Display a "mark as complete" UI element
 8. Programmatically mark an item as complete when a user clicks the "mark as complete" UI element
     - When a user mark’s a TO-DO as completed the message of the TO-DO should be crossed out (using strikethrough font)
@@ -27,9 +31,14 @@
 
 ## Things I didn't plan for or know about
 - Elem.innerHTML replaces all the child elements with the given string. I'm going to need to create elements, then insert them.
-- I should have started with a `ul` instead of a `div`
+- I should have started with a `ul` instead of a `div` for the todo list display
+- How to do forms - building the HTML properly, sending/getting the form data when there is no server involved, form validation.
+- Saving the collection of todos - some kind of storage
 
 ## Googled  
-`mdn document add children` - Didn't get what I thought I needed from this. Turns out I was just creating a new todo node and successively updating its innerText, instead of creating new todo nodes and giving them their own innterText.
+`mdn document add children` - Didn't get what I thought I needed from this. Turns out I was just creating a new todo node and successively updating its innerText, instead of creating new todo nodes and giving them their own innterText.  
+`mdn javascript forms`
 
 ## Resources 
+https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form
+Head First JavaScript: pages - 323, 358 - 361  

@@ -11,4 +11,15 @@ function buildTodoList(todos) {
     }
 }
 
+const addNewTodoButton = document.getElementById("add-todo");
+addNewTodoButton.onclick = handleAddingNewTodo;
+function handleAddingNewTodo() {
+    const todoInput = document.getElementById("new-todo");
+    const newTodo = todoInput.value;
+    todoCollection.push(newTodo);
+    const todo = document.createElement("li");
+    todo.innerText = newTodo
+    todosList.appendChild(todo);
+}
+
 buildTodoList(todoCollection);
