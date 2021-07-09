@@ -35,10 +35,31 @@
 - How to do forms - building the HTML properly, sending/getting the form data when there is no server involved, form validation.
 - Saving the collection of todos - some kind of storage
 
+## How I should have done it
+1. As a user I want to see a form for inputting todos
+    - Create a form element
+    - Give the form an input field
+    - Give the form a submit button
+2. As a user I want to be able to add todos with the form
+    - Create an element to hold todos
+    - Give that element an id
+    - Add an event handler for the form's submit button
+    - Create a reference to the form input so we can get the value submitted
+    - Create an element to hold the todo
+    - Validate that the input is not empty
+    - Insert the element into the todo list
+    - Clear the form input of content
+3. As a user I want to be able to mark a todo as complete
+    - Add an element to each todo with the text "mark complete"
+    - Create a reference to this element
+4. As a user I want to be able to delete todos that have been completed
+
 ## Googled  
 `mdn document add children` - Didn't get what I thought I needed from this. Turns out I was just creating a new todo node and successively updating its innerText, instead of creating new todo nodes and giving them their own innterText.  
 `mdn javascript forms`
+`form event`
 
 ## Resources 
 https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form
 Head First JavaScript: pages - 323, 358 - 361  
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event  

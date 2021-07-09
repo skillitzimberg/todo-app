@@ -1,25 +1,14 @@
+const addTodoForm = document.getElementById("add-todo");
 const todosList = document.getElementById("todos");
 
-let todoCollection = ["Water the yard", "Bless the child", "Mow the yard", ];
+addTodoForm.addEventListener("submit", handleAddingNewTodo);
 
-function buildTodoList(todos) {
-    let todo;
-    for(let i = 0; i < todos.length; i++) {
-        todo = document.createElement("li");
-        todo.innerText = `${todos[i]}`
-        todosList.appendChild(todo);
-    }
-}
-
-const addNewTodoButton = document.getElementById("add-todo");
-addNewTodoButton.onclick = handleAddingNewTodo;
-function handleAddingNewTodo() {
+function handleAddingNewTodo(event) {
+    event.preventDefault();
     const todoInput = document.getElementById("new-todo");
     const newTodo = todoInput.value;
-    todoCollection.push(newTodo);
     const todo = document.createElement("li");
-    todo.innerText = newTodo
+    todo.innerText = newTodo;
     todosList.appendChild(todo);
+    todoInput.value = "";
 }
-
-buildTodoList(todoCollection);
