@@ -17,5 +17,5 @@ function handleAddingNewTodo(event) {
 
 function handleMarkComplete(event) {
     console.log(event.target);
-    event.target.parentElement.firstChild.className = "complete";
+    event.target.parentElement.firstChild.classList.add("complete");
 }
