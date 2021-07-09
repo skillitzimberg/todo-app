@@ -1,14 +1,14 @@
-const addTodoForm = document.getElementById("add-todo");
+const todoForm = document.getElementById("todo-form");
 const todosList = document.getElementById("todos");
 
-addTodoForm.addEventListener("submit", handleAddingNewTodo);
+todoForm.addEventListener("submit", handleAddingNewTodo);
 
 function handleAddingNewTodo(event) {
     event.preventDefault();
-    const todoInput = document.getElementById("new-todo");
+    const todoInput = document.getElementById("todo-input");
     const newTodo = todoInput.value;
     const todo = document.createElement("li");
-    todo.innerText = newTodo;
+    todo.innerHTML = `<span class="">${newTodo}</span> <span>Mark Complete</span>`;
     todosList.appendChild(todo);
     todoInput.value = "";
 }

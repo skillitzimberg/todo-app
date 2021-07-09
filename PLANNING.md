@@ -51,15 +51,26 @@
     - Clear the form input of content
 3. As a user I want to be able to mark a todo as complete
     - Add an element to each todo with the text "mark complete"
-    - Create a reference to this element
+    - Create a reference to this element ????
 4. As a user I want to be able to delete todos that have been completed
 
 ## Googled  
 `mdn document add children` - Didn't get what I thought I needed from this. Turns out I was just creating a new todo node and successively updating its innerText, instead of creating new todo nodes and giving them their own innterText.  
 `mdn javascript forms`
 `form event`
+`clickable child bubble`
+`clickable child bubbling`
+`css pseudo element`
 
 ## Resources 
 https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form
 Head First JavaScript: pages - 323, 358 - 361  
 https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event  
+https://www.quirksmode.org/js/events_order.html  
+https://css-tricks.com/slightly-careful-sub-elements-clickable-things/;
+https://dev.to/shimphillip/handing-javascript-events-efficiently-with-bubble-and-capture-4ha5;
+https://stackoverflow.com/questions/38861601/how-to-only-trigger-parent-click-event-when-a-child-is-clicked/38861760; 
+https://developer.mozilla.org/en-US/docs/Web/CSS/::before; 
+
+## Potential problems
+[cross-site scripting attack due to `innerHTML`](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)  
