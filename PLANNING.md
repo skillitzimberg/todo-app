@@ -50,8 +50,14 @@
     - Insert the element into the todo list
     - Clear the form input of content
 3. As a user I want to be able to mark a todo as complete
-    - Add an element to each todo with the text "mark complete"
-    - Create a reference to this element ????
+    - Add an element to each `li` with the text "mark complete"
+    - Create a reference to the todos `ul`
+    - Attach an event handler to the todos `ul`
+    - Use the event to target the todo `span`
+    - Add a `complete` class to the todo `span`
+    - Create `styles.css` file
+    - Link the stylesheet to the HTML
+    - Add a CSS rule to line-through the todo text
 4. As a user I want to be able to delete todos that have been completed
 
 ## Googled  
@@ -61,6 +67,7 @@
 `clickable child bubble`
 `clickable child bubbling`
 `css pseudo element`
+`click on sibling change sibling`
 
 ## Resources 
 https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form
@@ -71,6 +78,8 @@ https://css-tricks.com/slightly-careful-sub-elements-clickable-things/;
 https://dev.to/shimphillip/handing-javascript-events-efficiently-with-bubble-and-capture-4ha5;
 https://stackoverflow.com/questions/38861601/how-to-only-trigger-parent-click-event-when-a-child-is-clicked/38861760; 
 https://developer.mozilla.org/en-US/docs/Web/CSS/::before; 
+https://www.quirksmode.org/js/events_order.html;  
+https://stackoverflow.com/questions/51688421/how-to-trigger-event-on-targets-sibling;  
 
 ## Potential problems
 [cross-site scripting attack due to `innerHTML`](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)  

@@ -1,7 +1,9 @@
 const todoForm = document.getElementById("todo-form");
-const todosList = document.getElementById("todos");
-
 todoForm.addEventListener("submit", handleAddingNewTodo);
+
+const todosList = document.getElementById("todos");
+todosList.addEventListener("click", handleMarkComplete);
+
 
 function handleAddingNewTodo(event) {
     event.preventDefault();
@@ -11,4 +13,9 @@ function handleAddingNewTodo(event) {
     todo.innerHTML = `<span class="">${newTodo}</span> <span>Mark Complete</span>`;
     todosList.appendChild(todo);
     todoInput.value = "";
+}
+
+function handleMarkComplete(event) {
+    console.log(event.target);
+    event.target.parentElement.firstChild.className = "complete";
 }
