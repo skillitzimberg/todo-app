@@ -59,6 +59,10 @@
     - Link the stylesheet to the HTML
     - Add a CSS rule to line-through the todo text
 4. As a user I want to be able to delete todos that have been completed
+    - Add a delete `span` to the todo `li`
+    - give it a class of `hidden`
+    - Add a `.hidden` rule to the stylesheet
+    - Use `toggle` instead of `add()` and `remove()` on the first & last child elements of the `li`
 
 ## Googled  
 `mdn document add children` - Didn't get what I thought I needed from this. Turns out I was just creating a new todo node and successively updating its innerText, instead of creating new todo nodes and giving them their own innterText.  
