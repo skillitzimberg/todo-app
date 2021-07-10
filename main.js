@@ -3,6 +3,7 @@ todoForm.addEventListener("submit", handleAddingNewTodo);
 
 const todosList = document.getElementById("todos");
 todosList.addEventListener("click", handleMarkComplete);
+todosList.addEventListener("click", handleDelete);
 
 
 function handleAddingNewTodo(event) {
@@ -18,6 +19,12 @@ function handleAddingNewTodo(event) {
 function handleMarkComplete(event) {
     console.log(event.target);
     event.target.parentElement.firstChild.classList.toggle("complete");
-    event.target.parentElement.lastChild.classList.toggle("hidden");
-    
+    event.target.parentElement.lastChild.classList.toggle("hidden"); 
+}
+
+function handleDelete(event) {
+    if(event.target.firstChild.data === "DELETE") {
+        let todo = event.target.parentNode;
+        todo.remove();
+    }; 
 }
