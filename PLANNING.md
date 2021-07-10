@@ -69,6 +69,13 @@
     - If text content of the target is "Delete"
         - Get a reference to the todo `li`
         - use the element's `.remove()` method to delete it from the list
+6. As a user I want the list to look better
+    - Center elements on the page
+    - Select a better font
+    - Use font styles to differentiate the todo from the "Mark Complete" & "Delete" buttons
+    - Remove bullets from `li`'s
+    - Select a background color
+    - Select a font color
 
 ## Googled  
 `mdn document add children` - Didn't get what I thought I needed from this. Turns out I was just creating a new todo node and successively updating its innerText, instead of creating new todo nodes and giving them their own innterText.  

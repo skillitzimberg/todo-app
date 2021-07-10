@@ -1,3 +1,44 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #222;
+    color: skyblue;
+}
+
+main {
+    text-align: center;
+}
+
+form,
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+input,
+label {
+    display: block;
+    margin: 0 auto 1em;
+}
+
+label {
+    font-size: 1.5em;
+}
+
+ul {
+    list-style: none;
+}
+
+.todo {
+    font-size: 1.7em;
+}
+
+.toggle {
+    border: 1px solid skyblue;
+    border-radius: 5px;
+    padding: 0.1em;
+}
+
 .complete {
     text-decoration: line-through;
 }
@@ -6,7 +47,7 @@
     display: none;
 }
 
-li > span.complete > span.delete {
-    content: "DELETE";
-    color: "red";
+.delete {
+    background-color: red;
+    color: aliceblue;
 }

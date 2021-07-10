@@ -11,7 +11,7 @@ function handleAddingNewTodo(event) {
     const todoInput = document.getElementById("todo-input");
     const newTodo = todoInput.value;
     const todo = document.createElement("li");
-    todo.innerHTML = `<span class="">${newTodo}</span> <span>Mark Complete</span> <span class="hidden">DELETE</span>`;
+    todo.innerHTML = `<span class="todo">${newTodo}</span> <span class="toggle">COMPLETE</span> <span class="toggle delete hidden">DELETE</span>`;
     todosList.appendChild(todo);
     todoInput.value = "";
 }
