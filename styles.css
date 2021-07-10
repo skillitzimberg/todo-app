@@ -27,6 +27,7 @@ label {
 
 ul {
     list-style: none;
+    margin-top: 2em;
 }
 
 .todo {
