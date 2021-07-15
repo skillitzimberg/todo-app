@@ -1,30 +1,44 @@
-const todoForm = document.getElementById("todo-form");
-todoForm.addEventListener("submit", handleAddingNewTodo);
+document.getElementById("todo-form")
+    .addEventListener("submit", displayTodo);
 
-const todosList = document.getElementById("todos");
-todosList.addEventListener("click", handleMarkComplete);
-todosList.addEventListener("click", handleDelete);
+document.getElementById("todos")
+    .addEventListener("click", toggleComplete);
 
+document.getElementById("todos")
+    .addEventListener("click", deleteTodo);
 
-function handleAddingNewTodo(event) {
-    event.preventDefault();
+function displayTodo(e) {
+    e.preventDefault();
+
     const todoInput = document.getElementById("todo-input");
-    const newTodo = todoInput.value;
-    const todo = document.createElement("li");
-    todo.innerHTML = `<span class="todo">${newTodo}</span> <span class="toggle">COMPLETE</span> <span class="toggle delete hidden">DELETE</span>`;
-    todosList.appendChild(todo);
+    const todoText = todoInput.value;
+    const todoListItem = document.createElement("li");
+    const todoSpan = createCustomSpan("todo", todoText);
+    const completeButton = createCustomSpan("toggle", "COMPLETE");
+    const deleteButton = createCustomSpan("toggle delete hidden", "DELETE");
+
+    todoListItem.append(todoSpan);
+    todoListItem.append(completeButton);
+    todoListItem.append(deleteButton);
+    document.getElementById("todos").append(todoListItem);
+
     todoInput.value = "";
 }
 
-function handleMarkComplete(event) {
-    console.log(event.target);
-    event.target.parentElement.firstChild.classList.toggle("complete");
-    event.target.parentElement.lastChild.classList.toggle("hidden"); 
+function createCustomSpan(className = "", text = "") {
+    const spanElem = document.createElement("span");
+    spanElem.className = className;
+    spanElem.textContent = text;
+    return spanElem;
 }
 
-function handleDelete(event) {
-    if(event.target.firstChild.data === "DELETE") {
-        let todo = event.target.parentNode;
-        todo.remove();
+function toggleComplete(e) {
+    e.target.parentElement.firstChild.classList.toggle("complete");
+    e.target.parentElement.lastChild.classList.toggle("hidden"); 
+}
+
+function deleteTodo(e) {
+    if (e.target.firstChild.data === "DELETE") {
+        e.target.parentNode.remove();
     }; 
 }
