@@ -76,6 +76,8 @@
     - Remove bullets from `li`'s
     - Select a background color
     - Select a font color
+7. As a user I want the app to look and feel good on mobile
+    - Style todos and their buttons for mobile phone screens
 
 ## Googled  
 `mdn document add children` - Didn't get what I thought I needed from this. Turns out I was just creating a new todo node and successively updating its innerText, instead of creating new todo nodes and giving them their own innterText.  
